@@ -1,0 +1,114 @@
+/**
+* @author Gabriel Baril gabriel_baril@hotmail.com
+* @todo Développer les styles du formulaires ici
+**/
+body, main, fieldset, div, ul, li, input, label, img{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    background-color: @blanc;
+    width: 100%;
+    height: 100%;
+}
+h1, h2, h3, h4{
+    margin:0;
+}
+
+.container-page{
+    max-width: 1400px;
+    margin: auto;
+    padding: 2rem 5%;
+
+    /* ================================================== */
+    /* ==================== Accueil ===================== */
+    /* ================================================== */
+    & > .home{
+        & > .container-featured{
+
+            & > .featured{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+
+                & > div{
+                    width: 20%;
+                    padding: 1rem;
+                    display: flex;
+                    //flex-wrap: nowrap;
+                    flex-direction: column;
+                    align-items: center;
+
+                    @media screen and (max-width: @largedesktop) {
+                        width: 25%;
+                    }
+                    
+                    @media screen and (max-width: @netbook) {
+                        width: 33.33%;
+                    }
+
+                    @media screen and (max-width: @tablet) {
+                        width: 50%;
+                    }
+
+                    @media screen and (max-width: @phablet) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        & > .categorie{
+            & > div{
+                display: flex;
+                width: 25%;
+                min-height: 25%;
+
+                & > a{
+
+                }
+            }
+        }
+    }
+    /* ================================================== */
+
+    /* ================================================== */
+    /* ====================== Shop ====================== */
+    /* ================================================== */
+    & > .shop{
+
+        & > div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            & > div{
+                width: 20%;
+                padding: 1rem;
+                display: flex;
+                //flex-wrap: nowrap;
+                flex-direction: column;
+                align-items: center;
+
+                @media screen and (max-width: @largedesktop) {
+                        width: 25%;
+                    }
+                
+                @media screen and (max-width: @netbook) {
+                    width: 33.33%;
+                }
+
+                @media screen and (max-width: @tablet) {
+                    width: 50%;
+                }
+
+                @media screen and (max-width: @phablet) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    /* ================================================== */
+}

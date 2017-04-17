@@ -1,0 +1,29 @@
+{
+  "name": "absolu",
+  "description": "Fichiers Grunt de base Absolu",
+  "version": "0.0.2",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "ssh://absoludev2@dev.absoludev.ca:9999/~/repo/absolu/absolu-grunt.git"
+  },
+  "author": "Absolu",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-grunticon": "2.2.2",
+    "grunt-parker": "^0.2.0",
+    "grunt-pot": "^0.3.0",
+    "imagemin-gifsicle": "^5.1.0",
+    "imagemin-pngquant": "^5.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "time-grunt": "^1.4.0"
+  },
+  "dependencies": {
+    "imagemin-jpegoptim": "^5.0.0"
+  }
+}
