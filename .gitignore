@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/grunt/node_modules
 
 # testing
 /coverage
