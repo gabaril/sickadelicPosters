@@ -16,15 +16,15 @@ const Navigation = () => (
             <nav>
                 <div className="nav-secondaire">
                     <ul>
-                        <li><Link to="/help">Help</Link></li>
-                        <li>Log In / Sign Up</li>
+                        <li><Link to="/help">Besoin d'aide?</Link></li>
+                        <li>Se connecter / S'inscrire</li>
                     </ul>
                 </div>
                 <div  className="nav-principal">
-                    <h1><Link to="/"><img src={require("./img/Logo.png")}/></Link></h1>
+                    <h1><Link to="/"><img src={require("./sources/images/icones/logo.svg")}/></Link></h1>
                     <ul>
-                        <li><Link to="/shop/all">Shop</Link></li>
-                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/shop/all">Boutique</Link></li>
+                        <li><Link to="/about">À propos</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>

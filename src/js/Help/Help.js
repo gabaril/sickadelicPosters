@@ -8,7 +8,7 @@ export default class Contact extends React.Component {
         //console.log("settings");
         return (
             <div>
-                <h1>Help</h1>
+                <h1>Besoin d'aide?</h1>
             </div>
         );
     }

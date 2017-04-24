@@ -2,14 +2,15 @@
  * Created by aaagabichou on 17-02-13.
  */
 import React from "react";
+import $ from 'jquery';
 
 export default class Form extends React.Component {
     constructor(){
         super();
         this.state = {
-            Subject: "",
             Name: "",
             Email: "",
+            Subject: "",
             Message: "",
         };
         this.handleChange = this.handleChange.bind(this);
@@ -17,7 +18,24 @@ export default class Form extends React.Component {
     }
 
     handleSubmit(e){
-        alert('Name: ' + this.state.Name + 'Adress: ' + this.state.Adress);
+        var donnees = 'Nom='+this.state.Name+'&Email='+this.state.Email+'&Honeypot='+this.state.Subject+'&Message='+this.state.Message;
+
+        $.ajax({
+            //url:"http://localhost/~aaagabichou/sickadelic/src/php/ApiFetchAll.php",
+            //url:"http://timunix.cegep-ste-foy.qc.ca/~gclaveau/sickadelic/ApiFetchAll.php",
+            url:"http://gabrielbaril.ca/sickadelic/ApiContact.php",
+            type:"POST",
+            data: donnees,
+            dataType: 'json',
+            cache: false,
+            success: function(){
+
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                console.log(errorThrown);
+            },
+            async: false
+        });
     }
 
     handleChange(e){
@@ -32,23 +50,18 @@ export default class Form extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>
-                    Name:
-                    <input type="text" name="Subject" value={this.state.Subject} required={true} onChange={this.handleChange}/>
-                </label>
-                <label>
-                    Adress:
-                    <input type="text" name="Name" value={this.state.Name} required={true} onChange={this.handleChange}/>
-                </label>
-                <label>
-                    Email:
-                    <input type="email" name="Email" value={this.state.Email} required={true} onChange={this.handleChange}/>
-                </label>
-                <label>
-                    Message:
-                    <input type="text" name="Phone" value={this.state.Message} required={true} onChange={this.handleChange}/>
-                </label>
-                <input type="submit" value="Submit"/>
+                <label htmlFor="Name">Nom:</label>
+                <input type="text" id="Name" name="Name" value={this.state.Name} required={true} onChange={this.handleChange}/>
+
+                <label htmlFor="Email">Adresse Courriel:</label>
+                <input type="email" id="Email" name="Email" value={this.state.Email} required={true} onChange={this.handleChange}/>
+
+                <input type="text" id="Subject" name="Subject" required={false} onChange={this.handleChange}/>
+                
+                <label htmlFor="Message">Message:</label>
+                <textarea id="Message" name="Message" required={true} onChange={this.handleChange}></textarea>
+
+                <input type="submit" value="Envoyer"/>
             </form>
         );
     }

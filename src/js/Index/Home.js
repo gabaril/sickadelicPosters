@@ -9,9 +9,9 @@ export default class Home extends React.Component {
     render() {
         return (
             <div className={'home'}>
-            <h2>Featured Posters</h2>
+            <h2>En vedettes</h2>
             <Featured/>
-            <h2>Shop by Categories</h2>
+            <h2>Catégories</h2>
             <Categorie/>
             </div>
         );
