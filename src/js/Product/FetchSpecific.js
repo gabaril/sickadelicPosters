@@ -9,6 +9,7 @@ const Fetch = (props) => {
     var Description = "";
     var Prix = "";
     var Img = "";
+    var Url = "http://localhost:3000/product/"+ID;
     var donnees = 'data='+props.Identifiant;
     $.ajax({
         //url:"http://localhost/~aaagabichou/sickadelic/src/php/ApiFetchSpecific.php",
@@ -35,6 +36,13 @@ const Fetch = (props) => {
             <img src={"../"+Img+".jpg"}/>
             <p>{Description}</p>
             <span>{Prix}</span>
+            <button className="snipcart-add-item"
+            data-item-id={ID}
+            data-item-name={Titre}
+            data-item-price={Prix}
+            data-item-weight="20"
+            data-item-url={Url}
+            data-item-Description={Description}>Ajouter au panier</button>
             </div>);
             }
             export default Fetch;
