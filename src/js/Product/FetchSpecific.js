@@ -9,9 +9,10 @@ const Fetch = (props) => {
     var Description = "";
     var Prix = "";
     var Img = "";
+    var Url = "";
     //var Url = "http://localhost:3000/product/"+ID;
     //var Url = "http://decorator-arches-17418.netlify.com/product/"+ID;
-    var Url = "http://decorator-arches-17418.netlify.com;
+    //var Url = "http://decorator-arches-17418.netlify.com;
     var donnees = 'data='+props.Identifiant;
     $.ajax({
         //url:"http://localhost/~aaagabichou/sickadelic/src/php/ApiFetchSpecific.php",
@@ -26,6 +27,7 @@ const Fetch = (props) => {
             Description = result['description'];
             Prix = result['price'];
             Img = result['image'];
+            Url = result['url'];
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             console.log('Erreur:'+ errorThrown);
