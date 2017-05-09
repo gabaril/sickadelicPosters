@@ -10,7 +10,8 @@ const Fetch = (props) => {
     var Prix = "";
     var Img = "";
     //var Url = "http://localhost:3000/product/"+ID;
-    var Url = "http://decorator-arches-17418.netlify.com/product/"+ID;
+    //var Url = "http://decorator-arches-17418.netlify.com/product/"+ID;
+    var Url = "http://decorator-arches-17418.netlify.com;
     var donnees = 'data='+props.Identifiant;
     $.ajax({
         //url:"http://localhost/~aaagabichou/sickadelic/src/php/ApiFetchSpecific.php",
