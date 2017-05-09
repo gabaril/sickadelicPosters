@@ -22,11 +22,10 @@ const Fetch = (props) => {
         dataType:'json',
         cache: false,
         success: function(result){
-            Titre = result[1];
-            Description = result[2];
-            Prix = result[3];
-            console.log(result[4]);
-            Img = result[4];
+            Titre = result['name'];
+            Description = result['description'];
+            Prix = result['price'];
+            Img = result['image'];
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             console.log('Erreur:'+ errorThrown);

@@ -12,6 +12,7 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 require_once ('config.php');
 
 $id = $_GET['data'];
+$url = "http://gabrielbaril.ca/sickadelic/ApiFetchSpecific.php?data=".$id.".json";
 $strSQL = "SELECT * FROM t_affiche WHERE id_affiche=".$id;
 
 if ($objResultAffiche = $objConnMySQLi->query($strSQL)) {
@@ -24,5 +25,5 @@ if ($objResultAffiche = $objConnMySQLi->query($strSQL)) {
     }
     $objResultAffiche->free_result();
 }
-$arr = array($id, $titre, $description, $prix, $img);
+$arr = array("id" => $id, "name" => $titre, "description" => $description, "price" => $prix, "image" => $img, "url" => $url);
 echo json_encode($arr);
