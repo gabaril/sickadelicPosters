@@ -9,9 +9,8 @@ const Fetch = (props) => {
     var donnees = 'data='+props.Categorie;
 
     $.ajax({
-        //url:"http://localhost/~aaagabichou/sickadelic/src/php/ApiFetchAll.php",
-        //url:"http://timunix.cegep-ste-foy.qc.ca/~gclaveau/sickadelic/ApiFetchAll.php",
-        url:"http://gabrielbaril.ca/sickadelic/ApiFetchAll.php",
+        url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchAll.php",
+        //url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchAll.php",
         type:"GET",
         data: donnees,
         dataType: 'json',

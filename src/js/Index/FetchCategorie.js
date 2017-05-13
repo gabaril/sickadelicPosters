@@ -8,9 +8,8 @@ const Fetch = ({props}) => {
     var Categories = [];
 
     $.ajax({
-        //url:"http://localhost/~aaagabichou/sickadelic/src/php/ApiFetchAll.php",
-        //url:"http://timunix.cegep-ste-foy.qc.ca/~gclaveau/sickadelic/ApiFetchAll.php",
-        url:"http://gabrielbaril.ca/sickadelic/ApiFetchCategorie.php",
+        url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchCategorie.php",
+        //url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchCategorie.php",
         type:"POST",
         dataType: 'json',
         cache: false,

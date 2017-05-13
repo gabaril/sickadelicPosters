@@ -21,9 +21,8 @@ export default class Form extends React.Component {
         var donnees = 'Nom='+this.state.Name+'&Email='+this.state.Email+'&Honeypot='+this.state.Subject+'&Message='+this.state.Message;
 
         $.ajax({
-            //url:"http://localhost/~aaagabichou/sickadelic/src/php/ApiFetchAll.php",
-            //url:"http://timunix.cegep-ste-foy.qc.ca/~gclaveau/sickadelic/ApiFetchAll.php",
-            url:"http://gabrielbaril.ca/sickadelic/ApiContact.php",
+            url:"http://gabrielbaril.ca/sickadelic/Prod/ApiContact.php",
+            //url:"http://gabrielbaril.ca/sickadelic/Dev/ApiContact.php",
             type:"POST",
             data: donnees,
             dataType: 'json',

@@ -15,9 +15,8 @@ const Fetch = (props) => {
     //var Url = "http://decorator-arches-17418.netlify.com;
     var donnees = 'data='+props.Identifiant;
     $.ajax({
-        //url:"http://localhost/~aaagabichou/sickadelic/src/php/ApiFetchSpecific.php",
-        //url:"http://timunix.cegep-ste-foy.qc.ca/~gclaveau/sickadelic/ApiFetchSpecific.php",
-        url:"http://gabrielbaril.ca/sickadelic/ApiFetchSpecific.php",
+        url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchSpecific.php",
+        //url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchSpecific.php",
         type:"GET",
         data: donnees,
         dataType:'json',
