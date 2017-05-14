@@ -10,9 +10,7 @@ const Fetch = (props) => {
     var Prix = "";
     var Img = "";
     var Url = "";
-    //var Url = "http://localhost:3000/product/"+ID;
-    //var Url = "http://decorator-arches-17418.netlify.com/product/"+ID;
-    //var Url = "http://decorator-arches-17418.netlify.com;
+    var srcBackground = '';
     var donnees = 'data='+props.Identifiant;
     $.ajax({
         url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchSpecific.php",
@@ -33,9 +31,12 @@ const Fetch = (props) => {
         },
         async: false
     });
+    srcBackground ={
+        backgroundImage: 'url("../'+Img+'.jpg")'
+    }
     return (<div>
             <h1>{Titre}</h1>
-            <img src={"../"+Img+".jpg"}/>
+            <div className="img-affiche" style={srcBackground}></div>
             <p>{Description}</p>
             <span>{Prix}</span>
             <button className="snipcart-add-item"

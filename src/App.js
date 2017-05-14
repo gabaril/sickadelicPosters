@@ -2,6 +2,7 @@ import React, { Component }  from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { BrowserHistory } from 'react-router'
 import './css/sickadelic.css';
+import './sources/snipcart-theme/themes/base/snipcart.min.css';
 import Home from './js/Index/Home'
 import Shop from './js/Shop/Container'
 import About from './js/About/About'
@@ -17,7 +18,7 @@ const Navigation = () => (
                 <div className="nav-secondaire">
                     <ul>
                         <li><Link to="/help">Besoin d'aide?</Link></li>
-                        <li>Se connecter / S'inscrire</li>
+                        <li><a href="#" className="snipcart-user-profile"><span className="snipcart-user-email">Se connecter</span></a></li>
                     </ul>
                 </div>
                 <div  className="nav-principal">
@@ -26,6 +27,7 @@ const Navigation = () => (
                         <li><Link to="/shop/all">Boutique</Link></li>
                         <li><Link to="/about">À propos</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
+                        <li><a href="#" className="snipcart-checkout">Panier</a></li>
                     </ul>
                 </div>
             </nav>

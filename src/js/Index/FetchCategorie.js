@@ -17,7 +17,7 @@ const Fetch = ({props}) => {
             Categories = $.map(result.categorie, function (value, index) {
                 return (
                     <div key={value.id}>
-                    <Link to={"/shop/"+value.slug}><span>{value.categorie}</span></Link>
+                    <Link to={"/shop/"+value.slug}><div className="img-categories"><span>{value.categorie}</span></div></Link>
                     </div>);
                     });
             },

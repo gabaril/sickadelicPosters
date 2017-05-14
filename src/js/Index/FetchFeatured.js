@@ -6,6 +6,8 @@ import $ from 'jquery';
 import {Link} from 'react-router-dom'
 const Fetch = ({props}) => {
     var Produits = [];
+    var srcBackground = '';
+    
 
     $.ajax({
         url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchFeatured.php",
@@ -15,9 +17,12 @@ const Fetch = ({props}) => {
         cache: false,
         success: function(result){
             Produits = $.map(result.posters, function (value, index) {
+                srcBackground ={
+                    backgroundImage: 'url("../'+value.img+'.jpg")'
+                }
                 return (
                     <div key={value.id}>
-                        <Link to={"/product/"+value.id}><img src={"../"+value.img+".jpg"}/></Link>
+                        <Link to={"/product/"+value.id}><div className="img-affiche" style={srcBackground}></div></Link>
                         <span>Prix: {value.prix}</span>
                     </div>);
                     });

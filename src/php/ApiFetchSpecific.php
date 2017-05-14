@@ -5,16 +5,16 @@
  * Date: 17-02-22
  * Time: 13:49
  */
-header("Access-Control-Allow-Origin: http://localhost:3000 ");
+//header("Access-Control-Allow-Origin: http://localhost:3000 ");
 header('Content-type: application/json');
-//header("Access-Control-Allow-Origin: http://sickadelicposters.netlify.com");
+header("Access-Control-Allow-Origin: http://sickadelicposters.netlify.com");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, If-Modified-Since, Cache-Control, Pragma");
 
 require_once ('config.php');
 
 $id = $_GET['data'];
-$url = "http://gabrielbaril.ca/sickadelic/ApiFetchSpecific.php?data=".$id;
-//$url = "http://gabrielbaril.ca/sickadelic/products.json";
+$url = "http://gabrielbaril.ca/sickadelic/Prod/ApiFetchSpecific.php?data=".$id;
+//$url = "http://gabrielbaril.ca/sickadelic/Dev/ApiFetchSpecific.php?data=".$id;
 $strSQL = "SELECT * FROM t_affiche WHERE id_affiche=".$id;
 
 if ($objResultAffiche = $objConnMySQLi->query($strSQL)) {

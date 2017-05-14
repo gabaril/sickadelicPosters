@@ -16,7 +16,14 @@ body {
 h1, h2, h3, h4{
     margin:0;
 }
-
+.img-affiche{
+    display: block;
+    width: 225px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .container-page{
     max-width: 1400px;
     margin: auto;
@@ -44,7 +51,7 @@ h1, h2, h3, h4{
                     @media screen and (max-width: @largedesktop) {
                         width: 25%;
                     }
-                    
+
                     @media screen and (max-width: @laptop) {
                         width: 33.33%;
                     }
@@ -56,11 +63,11 @@ h1, h2, h3, h4{
                     @media screen and (max-width: @phablet) {
                         width: 100%;
                     }
-                    
+
                     & > img{
                         //box-shadow: 0px 0px 1px @noir;
                     }
-                }
+                }                           
             }
         }
 
@@ -97,9 +104,9 @@ h1, h2, h3, h4{
                 align-items: center;
 
                 @media screen and (max-width: @largedesktop) {
-                        width: 25%;
-                    }
-                
+                    width: 25%;
+                }
+
                 @media screen and (max-width: @laptop) {
                     width: 33.33%;
                 }
@@ -115,7 +122,7 @@ h1, h2, h3, h4{
         }
     }
     /* ================================================== */
-    
+
     /* ================================================== */
     /* ===================== Contact ==================== */
     /* ================================================== */
@@ -123,7 +130,7 @@ h1, h2, h3, h4{
         form{
             display: flex;
             flex-direction: column;
-            
+
             #Subject{
                 display: none;
             }
