@@ -2,7 +2,7 @@ import React, { Component }  from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { BrowserHistory } from 'react-router'
 import './css/sickadelic.css';
-import './sources/snipcart-theme/themes/base/snipcart.min.css';
+import './sources/sass/snipcart.min.css';
 import Home from './js/Index/Home'
 import Shop from './js/Shop/Container'
 import About from './js/About/About'
