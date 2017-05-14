@@ -13,7 +13,8 @@ const Fetch = (props) => {
     var srcBackground = '';
     var donnees = 'data='+props.Identifiant;
     $.ajax({
-        url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchSpecific.php",
+        url:"https://sickadelicposters.netlify.com/php/Prod/ApiFetchSpecific.php",
+        //url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchSpecific.php",
         //url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchSpecific.php",
         type:"GET",
         data: donnees,
