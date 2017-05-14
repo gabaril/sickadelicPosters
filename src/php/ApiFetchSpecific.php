@@ -13,8 +13,8 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 require_once ('config.php');
 
 $id = $_GET['data'];
-$url = "https://sickadelicposters.netlify.com/php/Prod/ApiFetchSpecific.php?data=".$id;
-//$url = "http://gabrielbaril.ca/sickadelic/Prod/ApiFetchSpecific.php?data=".$id;
+//$url = "https://sickadelicposters.netlify.com/php/Prod/ApiFetchSpecific.php?data=".$id;
+$url = "http://gabrielbaril.ca/sickadelic/Prod/ApiFetchSpecific.php?data=".$id;
 //$url = "http://gabrielbaril.ca/sickadelic/Dev/ApiFetchSpecific.php?data=".$id;
 $strSQL = "SELECT * FROM t_affiche WHERE id_affiche=".$id;
 
