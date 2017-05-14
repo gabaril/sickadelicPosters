@@ -1,0 +1,106 @@
+/**
+    COLOR
+
+    Where all color's variables are defined
+
+    Thanks to SASS Map, we can define all colors at one place.
+    We also respect our BEM like notation and files architecture.
+*/
+
+$palettes: (
+    action: (
+        link: #9E9E9E
+    ),
+    button: (
+        background: #d34163,
+        background--highlight: #d34163,
+        background--hover: darken(#d34163, 10%),
+        background--highlight-hover: darken(#d34163, 10%),
+        color: #fbfbfb,
+        color--highlight: #fbfbfb
+    ),
+    error: (
+        color: #F50057,
+        text-color: #2b2b2b,
+        text-color--invert: #fbfbfb
+    ),
+    flash: (
+        background--error: #F50057,
+        background--success: #00BFA5,
+        background--warning: #FFEB3B,
+        border: #2b2b2b,
+        color: #2b2b2b,
+        color--invert: #fbfbfb
+    ),
+    footer: (
+        background: #2b2b2b,
+        color: #fbfbfb,
+        color--highlight: #9E9E9E
+    ),
+    form: (
+        background: #fbfbfb,
+        border: #E0E0E0,
+        border--focus: #2b2b2b,
+        color: #424242,
+        color--highlight: #2b2b2b,
+        label-color: #9E9E9E
+    ),
+    header: (
+        background: #fbfbfb,
+        background--highlight: #d34163,
+        color: #fbfbfb,
+        label-color: #fbfbfb
+    ),
+    layout: (
+        background: #fff,
+        border: #E0E0E0,
+        close-color: #fbfbfb,
+        color: #9E9E9E,
+        content-background: #f8f8f8,
+        content-border: #BDBDBD,
+        loading-color: #2b2b2b
+    ),
+    loader: (
+        background: #2b2b2b,
+        background--highlight: #FFEB3B
+    ),
+    product: (
+        background: #f8f8f8,
+        border: #E0E0E0,
+        color--error: #d34163,
+        color--highlight: #2b2b2b
+    ),
+    quantity-trigger: (
+        background: #d34163,
+        background--hover: darken(#d34163, 10%),
+        background--disabled: #E0E0E0,
+        color: #2b2b2b,
+        color--button: #fbfbfb,
+        color--disabled: #BDBDBD
+    ),
+    static: (
+        background--highlight: #f8f8f8,
+        border: #E0E0E0,
+        color--highlight: #2b2b2b,
+        color--link: #9E9E9E
+    ),
+    step: (
+        background: #E0E0E0,
+        background--active: #fbfbfb,
+        border: #BDBDBD,
+        color: #9E9E9E,
+        color--active: #2b2b2b
+    ),
+    table: (
+        background--highlight: #f8f8f8,
+        border: #EEEEEE,
+        color--highlight: #2b2b2b,
+        color--success: #00BFA5
+    ),
+    tooltip: (
+        background: #ccc,
+        border: #ccc transparent,
+        label: #424242,
+        text: #2b2b2b
+    )
+);
