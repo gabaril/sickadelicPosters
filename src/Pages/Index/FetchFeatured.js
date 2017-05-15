@@ -24,7 +24,7 @@ const Fetch = ({props}) => {
                 return (
                     <div key={value.id}>
                         <Link to={"/product/"+value.id}><div className="img-affiche" style={srcBackground}></div></Link>
-                        <span>Prix: {value.prix}</span>
+                        <span>{value.prix}</span>
                     </div>);
                     });
             },
