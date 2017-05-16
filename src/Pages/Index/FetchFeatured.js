@@ -7,12 +7,12 @@ import {Link} from 'react-router-dom'
 const Fetch = ({props}) => {
     var Produits = [];
     var srcBackground = '';
-    
+
 
     $.ajax({
 
-        url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchFeatured.php",
-        //url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchFeatured.php",
+        //url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchFeatured.php",
+        url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchFeatured.php",
         type:"POST",
         dataType: 'json',
         cache: false,
@@ -23,16 +23,22 @@ const Fetch = ({props}) => {
                 }
                 return (
                     <div key={value.id}>
-                        <Link to={"/product/"+value.id}><div className="img-affiche" style={srcBackground}></div></Link>
-                        <span>{value.prix}</span>
+                        <Link to={"/product/"+value.id}><div className="img-affiche" style={srcBackground}><span>${value.prix}</span></div></Link>                        
                     </div>);
-                    });
-            },
-                             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                console.log(errorThrown);
-            },
-                async: false
-        });
-        return (<div className={'container-featured'}><div className={'featured'}>{Produits}</div></div>);
-           }
-           export default Fetch;
+            });
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            console.log(errorThrown);
+        },
+        async: false
+    });
+    return (
+        <div className={'container-featured'}>
+            <div className={'featured'}>
+                {Produits}
+            </div>
+            <div className="container-calltoaction"><a href="/shop/all" className="btn-calltoaction"><span>Boutique</span></a></div>
+        </div>
+    );
+}
+export default Fetch;

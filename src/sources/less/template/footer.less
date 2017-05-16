@@ -1,12 +1,30 @@
 footer{
-  //position: absolute;
-  //bottom: 0%;
-  .rappel-nav{
-    height: 8vh;
-    background-color: @noir;
-  }
-  .small{
-    text-align: center;
-    background-color: @blanc;
-  }
+    margin-top: 10rem;
+    //position: absolute;
+    //bottom: 0%;
+    .rappel-nav{
+        min-height: 100px;
+        background-color: @noir;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a{
+            margin: 2rem;
+
+            i{
+                color: @blanc;
+                -webkit-transition: all 0.25s ease; /* Safari */
+                transition: all 0.25s ease;
+            }
+
+            &:hover i, &:focus i{
+                color: @rose;
+            }
+        }
+    }
+    .small{
+        text-align: center;
+        background-color: @blanc;
+    }
 }

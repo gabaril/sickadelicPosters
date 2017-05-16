@@ -10,8 +10,8 @@ export default class ProductUI extends React.Component {
     }
     render() {
         return (
-            <div>
-            {this.props.Data}
+            <div className="Product">
+                {this.props.Data}
             </div>
         );
     }

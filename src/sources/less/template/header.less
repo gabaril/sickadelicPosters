@@ -1,9 +1,29 @@
-nav{    
+.banniere{
+    /*display: block;
+    width: 100%;
+    min-height: 600px;
+    background-image: linear-gradient(to bottom, rgba(74, 74, 74, 0.25), rgba(74, 74, 74, 0.25)), url(../sources/images/banniere.png);
+    background-image: -moz-linear-gradient(top, rgba(74, 74, 74, 0.25), rgba(74, 74, 74, 0.25)), url(../sources/images/banniere.png);
+    background-image: -o-linear-gradient(top, rgba(74, 74, 74, 0.25), rgba(74, 74, 74, 0.25)), url(../sources/images/banniere.png);
+    background-image: -ms-linear-gradient(top, rgba(74, 74, 74, 0.25), rgba(74, 74, 74, 0.25)), url(../sources/images/banniere.png);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(74, 74, 74, 0.25)), to(rgba(74, 74, 74, 0.25))), url(../sources/images/banniere.png);
+    background-image: -webkit-linear-gradient(top, rgba(74, 74, 74, 0.25), rgba(74, 74, 74, 0.25)), url(../sources/images/banniere.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    
+    box-shadow: 0px 0px 4px @shadow;
+    
+    z-index: 2;*/
+}
+
+nav{
     & .nav-secondaire{
         padding: 0 5%;
         display: flex;
         justify-content: flex-end;
         align-content: center;
+        box-shadow: 0px 0px 4px @shadow;
 
         ul{
             text-align: center;
@@ -13,7 +33,7 @@ nav{
 
             li{
                 &:first-child{
-                    margin-right: 5rem;
+                    //margin-right: 5rem;
                 }
             }
         }
@@ -24,20 +44,33 @@ nav{
         padding: 0 5%;
         height: 10rem;
         background-color: @blanc;
-        box-shadow: 0px 0px 1px @shadow;
+        box-shadow: 0px 0px 4px @shadow;
         display: flex;
         justify-content: space-between;
         align-content: center;
+        z-index: 3;
+        
         h1{
             text-align: center;
             display: flex;
             align-self: center;
 
-            a img{
+            a svg{
                 display: flex;
                 align-self: center;
                 width: 13.5rem;
                 height: auto;
+
+                path{
+                    -webkit-transition: all 0.25s ease; /* Safari */
+                    transition: all 0.25s ease;
+                }
+            }
+
+            &:hover, &:focus{
+                a svg path{
+                    fill: @rose;
+                }
             }
         }
         ul {
@@ -49,7 +82,7 @@ nav{
                 display: flex;
                 align-content: center;
                 align-self: center;
-                padding: 0 1rem;
+                padding: 0 1.5rem;
 
                 &:first-child{
                     padding-left: 0;
@@ -63,6 +96,22 @@ nav{
             li:nth-child(2){
                 //margin-left: 5rem;
                 //margin-right: 5rem;
+            }
+
+            .snipcart-checkout{
+                display: block;
+                width: 40px;
+                height: 40px;
+
+                svg path{
+                    -webkit-transition: all 0.25s ease; /* Safari */
+                    transition: all 0.25s ease;
+                }
+            }
+            .snipcart-checkout:hover, .snipcart-checkout:focus{
+                svg path{
+                    fill: @rose;
+                }
             }
         }
     }
@@ -92,12 +141,18 @@ nav{
                 z-index: 2;
             }
 
-            .logo-mobile{
+            .logo-mobile svg{
+                display: flex;
+                align-self: center;
                 width: 13.5rem;
                 height: auto;
                 z-index: 3;
+
+                path{
+                    fill:@blanc;
+                }
             }
-            
+
             .nav-mobile{
                 display: none;
                 width: 100%;
@@ -132,6 +187,7 @@ nav{
                 width: 100%;
                 background: @noir;
                 opacity: 0;
+                z-index: 1;
             }
         }
     }

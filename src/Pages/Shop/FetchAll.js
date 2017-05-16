@@ -11,8 +11,8 @@ const Fetch = (props) => {
 
     $.ajax({
 
-        url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchAll.php",
-        //url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchAll.php",
+        //url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchAll.php",
+        url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchAll.php",
         type:"GET",
         data: donnees,
         dataType: 'json',
@@ -24,8 +24,7 @@ const Fetch = (props) => {
                 }
                 return (
                     <div key={value.id}>
-                        <Link to={"/product/"+value.id}><div className="img-affiche" style={srcBackground}></div></Link>
-                        <span>Prix: {value.prix}</span>
+                        <Link to={"/product/"+value.id}><div className="img-affiche" style={srcBackground}><span>${value.prix}</span></div></Link>                        
                     </div>);
                     });
             },

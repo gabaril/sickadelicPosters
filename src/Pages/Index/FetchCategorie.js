@@ -9,8 +9,8 @@ const Fetch = ({props}) => {
 
     $.ajax({
 
-        url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchCategorie.php",
-        //url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchCategorie.php",
+        //url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchCategorie.php",
+        url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchCategorie.php",
         type:"POST",
         dataType: 'json',
         cache: false,
@@ -27,6 +27,6 @@ const Fetch = ({props}) => {
             },
                 async: false
         });
-        return (<div className={'categorie'}>{Categories}</div>);
+        return (<div className={'container-categorie'}><div className={'categorie'}>{Categories}</div></div>);
            }
            export default Fetch;

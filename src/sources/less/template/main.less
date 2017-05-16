@@ -21,6 +21,9 @@ body.disabled{
 h1, h2, h3, h4{
     margin:0;
 }
+section{
+    margin-top: 10rem;
+}
 .img-affiche{
     display: block;
     width: 225px;
@@ -28,16 +31,66 @@ h1, h2, h3, h4{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 2px 2px 5px @shadow;
+    border-radius: 4px;
+    box-shadow: 2px 2px 6px @shadow;
+    position: relative;
+
+    span{
+        opacity: 0;
+
+        font-size: 18px;
+        color: @blanc;
+        text-decoration: none;
+
+        position: absolute;
+        left: -15px;
+        top: 20%;
+
+        padding: 1rem 2rem;
+        border-radius: 4px;
+        background: @rose;
+        box-shadow: 2px 2px 6px @shadow;
+
+        -webkit-transition: all 0.25s ease; /* Safari */
+        transition: all 0.25s ease;
+    }
+
+    &:before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: @noir;
+        border-radius: 4px;
+        opacity: 0;
+
+        -webkit-transition: all 0.25s ease; /* Safari */
+        transition: all 0.25s ease;
+    }
+
+    &:hover {
+        &:before{
+            opacity: 0.4;
+        }
+        span{
+            opacity: 1;
+            transform: translate(10px, 20%);
+        }
+    }
 }
 .container-page{
     max-width: 1800px;
+    min-height: 74vh;
     margin: auto;
     padding: 2rem 5%;
 
     /* ================================================== */
     /* ==================== Accueil ===================== */
     /* ================================================== */
+    .container-featured{
+        position:relative;
+        margin-top: 5rem;
+    }
     .featured{
         display: flex;
         flex-wrap: wrap;
@@ -66,8 +119,16 @@ h1, h2, h3, h4{
 
             @media screen and (max-width: @phablet) {
                 width: 100%;
-            }            
+            }
         }                           
+    }
+    .container-calltoaction{
+        display: flex;
+        justify-content: flex-end;
+        padding: 2rem 1rem;
+    }
+    .container-categorie{
+        margin-top: 5rem;
     }
     .categorie{
         display: flex;
@@ -91,13 +152,25 @@ h1, h2, h3, h4{
                 width: 100%;
                 padding-bottom: 100%;
                 position: relative;
-                box-shadow: 2px 2px 5px @shadow;
+                border-radius: 4px;
+                box-shadow: 2px 2px 6px @shadow;
+
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                -webkit-transition: background 0.25s ease; /* Safari */
+                transition: background 0.25s ease;
 
                 span{
                     position: absolute;
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%, -50%);
+                }
+
+                &:hover{
+                    background-size: 110% 110%;
                 }
             }
 
@@ -107,11 +180,7 @@ h1, h2, h3, h4{
                 background-image: -o-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/movies_cat.jpg);
                 background-image: -ms-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/movies_cat.jpg);
                 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(74, 74, 74, 0.75)), to(rgba(74, 74, 74, 0.75))), url(../sources/images/movies_cat.jpg);
-                background-image: -webkit-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/movies_cat.jpg);
-
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
+                background-image: -webkit-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/movies_cat.jpg);                
             }
             &:nth-child(2) a{
                 background-image: linear-gradient(to bottom, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/games_cat.jpg);
@@ -120,10 +189,6 @@ h1, h2, h3, h4{
                 background-image: -ms-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/games_cat.jpg);
                 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(74, 74, 74, 0.75)), to(rgba(74, 74, 74, 0.75))), url(../sources/images/games_cat.jpg);
                 background-image: -webkit-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/games_cat.jpg);
-
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
             }
             &:nth-child(3) a{
                 background-image: linear-gradient(to bottom, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/popart_cat.jpg);
@@ -132,10 +197,6 @@ h1, h2, h3, h4{
                 background-image: -ms-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/popart_cat.jpg);
                 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(74, 74, 74, 0.75)), to(rgba(74, 74, 74, 0.75))), url(../sources/images/popart_cat.jpg);
                 background-image: -webkit-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/popart_cat.jpg);
-
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
             }
             &:last-child a{
                 background-image: linear-gradient(to bottom, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/quotes_cat.jpg);
@@ -144,10 +205,6 @@ h1, h2, h3, h4{
                 background-image: -ms-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/quotes_cat.jpg);
                 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(74, 74, 74, 0.75)), to(rgba(74, 74, 74, 0.75))), url(../sources/images/quotes_cat.jpg);
                 background-image: -webkit-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/quotes_cat.jpg);
-
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
             }
         }
     }
@@ -157,8 +214,10 @@ h1, h2, h3, h4{
     /* ====================== Shop ====================== */
     /* ================================================== */
     & > .shop{
+        margin-top: 10rem;
 
         & > div{
+            margin-top: 5rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
@@ -193,6 +252,14 @@ h1, h2, h3, h4{
                 }
             }                           
         }
+    }
+    /* ================================================== */
+
+    /* ================================================== */
+    /* ==================== Product ===================== */
+    /* ================================================== */
+    & > .Product{
+
     }
     /* ================================================== */
 
