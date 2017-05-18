@@ -1,8 +1,10 @@
 /* Base commune à toutes les résolutions */
 @font-face {
+    @import url('https://fonts.googleapis.com/css?family=Roboto:500');
     font-family: @fontTitre;
 }
 @font-face {
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans');
     font-family: @fontTexte;
 }
 html {
@@ -13,17 +15,22 @@ h1 {
     font-family: @fontTitre;
     color:@noir;
     font-size: 6rem;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 h2{
     font-family: @fontTitre;
     color:@noir;
     font-size: 6rem;
     line-height: 6rem;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 h3{
     font-family: @fontTitre;
     color: @noir;
     font-size:3rem;
+    line-height: 3rem;
 }
 h4{
     font-family: @fontTitre;
@@ -31,7 +38,8 @@ h4{
     font-size: 2rem;
 }
 label{
-    font-family: @fontTitre;
+    font-family: @fontTexte;
+    font-weight: 200;
     color: @noir;
     font-size: 2rem;
 }
@@ -67,4 +75,10 @@ nav{
     font-size: 24px;
     color: @blanc;
     text-decoration: none;
+}
+
+input[type='submit'], .snipcart-add-item{
+    font-family: @fontTitre;
+    font-size: 18px;
+    color: @blanc;
 }

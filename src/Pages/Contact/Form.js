@@ -8,9 +8,11 @@ export default class Form extends React.Component {
     constructor(){
         super();
         this.state = {
-            Name: "",
-            Email: "",
             Subject: "",
+            FirstName: "",
+            LastName: "",
+            Email: "",
+            Honey: "",
             Message: "",
         };
         this.handleChange = this.handleChange.bind(this);
@@ -18,7 +20,7 @@ export default class Form extends React.Component {
     }
 
     handleSubmit(e){
-        var donnees = 'Nom='+this.state.Name+'&Email='+this.state.Email+'&Honeypot='+this.state.Subject+'&Message='+this.state.Message;
+        var donnees = 'Sujet='+this.state.Subject+'&Prenom='+this.state.FirstName+'&Nom='+this.state.LastName+'&Email='+this.state.Email+'&Honeypot='+this.state.Honey+'&Message='+this.state.Message;
 
         $.ajax({
 
@@ -50,18 +52,30 @@ export default class Form extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <label htmlFor="Name">Nom:</label>
-                <input type="text" id="Name" name="Name" value={this.state.Name} required={true} onChange={this.handleChange}/>
+                <label htmlFor="Subject">Sujet:</label>
+                <input type="text" id="Subject" name="Subject" value={this.state.Subject} required={true} onChange={this.handleChange}/>
+
+                <div className="container-nom">
+                    <div>
+                        <label htmlFor="FirstName">Prénom:</label>
+                        <input type="text" id="FirstName" name="FirstName" value={this.state.FirstName} required={true} onChange={this.handleChange}/>
+                    </div>
+
+                    <div>
+                        <label htmlFor="LastName">Nom:</label>
+                        <input type="text" id="LastName" name="LastName" value={this.state.LastName} required={true} onChange={this.handleChange}/>
+                    </div>
+                </div>
 
                 <label htmlFor="Email">Adresse Courriel:</label>
                 <input type="email" id="Email" name="Email" value={this.state.Email} required={true} onChange={this.handleChange}/>
 
-                <input type="text" id="Subject" name="Subject" required={false} onChange={this.handleChange}/>
-                
+                <input type="text" id="Honey" name="Honey" required={false} onChange={this.handleChange}/>
+
                 <label htmlFor="Message">Message:</label>
                 <textarea id="Message" name="Message" required={true} onChange={this.handleChange}></textarea>
 
-                <input type="submit" value="Envoyer"/>
+                <div className="container-submit"><input type="submit" value="Envoyer"/></div>
             </form>
         );
     }

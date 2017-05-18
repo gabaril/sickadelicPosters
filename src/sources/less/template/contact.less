@@ -1,0 +1,111 @@
+.container-contact{
+    margin-top: 5rem;
+
+    .contact{
+        display: flex;
+        align-items: center;
+        margin-top: 3.5rem;
+
+        .ban-contact{
+            background: url(../sources/images/ban-contact.jpg);
+            background-position: 30% 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: block;
+            width: 50%;
+            height: 800px;
+            box-shadow: 0px 0px 4px @shadow;
+
+            @media screen and (max-width: @desktop) {
+                width: 35%;
+            }
+
+            @media screen and (max-width: @tablet) {
+                display: none;
+            }
+        }
+
+        .container-form{
+            width: 50%;
+            height: 850px;
+            padding: 5rem 4rem;
+            background: @blancPure;
+            border-radius: 4px;
+            box-shadow: 2px 2px 6px @shadow;
+
+            @media screen and (max-width: @desktop) {
+                width: 65%;
+            }
+
+            @media screen and (max-width: @tablet) {
+                width: 100%;
+            }
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+
+            label{
+                color: @gris;
+                margin-top: 2rem;
+            }
+
+            input[type='text'], input[type='email'], textarea{
+                border-radius: 2px;
+                border: solid 1px @gris;
+                background: @blanc;
+                height: 3rem;
+                outline: none;
+                padding: 0.5rem;
+                margin-top: 0.25rem;
+                font-family: @fontTexte;
+                font-size: 16px;
+                -webkit-transition: all 0.25s ease; /* Safari */
+                transition: all 0.25s ease;
+
+                &:hover, &:focus{
+                    border: solid 1px @noir;
+                }
+            }
+
+            textarea{
+                resize: none;
+                min-height: 15rem;
+            }
+
+            #Honey{
+                display: none;
+            }
+
+            .container-nom{
+                display: flex;
+
+                @media screen and (max-width: @mobile) {
+                    flex-direction: column;
+                }
+
+                & > div{
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+
+                    @media screen and (max-width: @mobile) {
+                        width: 100%;
+                    }
+
+                    &:first-child{
+                        margin-right: 2rem;
+                    }
+                }
+            }
+
+            .container-submit{
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 4rem;
+            }
+        }
+    }
+}

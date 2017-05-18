@@ -8,8 +8,17 @@ export default class Shop extends React.Component {
     render() {
         return (
             <div className={'shop'}>
-            <h1>Boutique</h1>
-            {this.props.Data}
+                <h2>Boutique</h2>
+                <div className={'container-boutique'}>
+                    <div className={'container-boutique-categories left'}>
+                        <h3>Catégories</h3>
+                        {this.props.Categories}
+                    </div>
+                    <div className={'container-boutique-produits right'}>
+                        <h3>Posters<span className="tag">{this.props.nomCategorie}</span></h3>
+                        {this.props.Data}
+                    </div>
+                </div>
             </div>
         );
     }

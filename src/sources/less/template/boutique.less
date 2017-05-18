@@ -1,0 +1,138 @@
+.shop{
+    margin-top: 5rem;
+
+    h3{
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    .container-boutique{
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: @desktop) {
+            flex-direction: column;
+        }
+    }
+
+    .container-boutique-categories{
+        margin-top: 3.5rem;
+        margin-right: 10rem;
+        width: 25%;
+        min-width: 250px;
+        height: auto;
+        background: @blancPure;
+        padding: 2rem;
+        max-height: 300px;
+        border-radius: 4px;
+        box-shadow: 2px 2px 6px @shadow;
+
+        @media screen and (max-width: @desktop) {
+            width: 100%;
+        }
+        
+        h3{
+            font-size: 24px;
+            margin-bottom: 0;
+            text-decoration: underline;
+        }
+
+        .categorie{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            div{
+                padding-top: 0.5rem;
+                width: 100%;
+                justify-content: flex-start;
+
+                a{
+                    background: none;
+                    box-shadow: none;
+                    padding-bottom: 0;
+                    width: auto;
+                    text-decoration: none;
+
+                    span{
+                        color: @noir;
+                        position: relative;
+                        left: 0;
+                        top: 0;
+                        transform: none;
+                        -webkit-transition: all 0.25s ease; /* Safari */
+                        transition: all 0.25s ease;
+
+                        &:hover{
+                            color: @rose;
+                        }
+                    }
+                }
+                
+                &.current a span{
+                    color: @rose;
+                }
+            }
+        }        
+    }
+
+    .container-boutique-produits{
+        margin-top: 3.5rem;
+        //display: flex;
+        
+        h3{
+            display: flex;
+            align-items: center;
+        }
+
+        .tag{
+            margin-left: 2rem;
+            padding: 1.25rem 4rem;
+            border-radius: 4px;
+            background: @blancPure;
+            color: @rose;
+            font-size: 18px;
+            box-shadow: 2px 2px 6px @shadow;
+        }
+
+        & > div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            & > div{
+                width: 25%;
+                padding: 1rem;
+                box-sizing: border-box;
+                display: flex;
+                //flex-wrap: nowrap;
+                flex-direction: column;
+                align-items: center;
+
+                @media screen and (max-width: @largedesktop) {
+                    //width: 20%;
+                }
+
+                @media screen and (max-width: 1500px) {
+                    width: 33.33%;
+                }
+
+                @media screen and (max-width: @desktop) {
+                    width: 25%;
+                }
+                
+                @media screen and (max-width: @laptop) {
+                    width: 33.33%;
+                }
+
+                @media screen and (max-width: @tablet) {
+                    width: 50%;
+                }
+
+                @media screen and (max-width: @phablet) {
+                    width: 100%;
+                }
+            }                           
+        }                           
+    }
+}

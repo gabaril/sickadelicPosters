@@ -37,7 +37,7 @@ const Fetch = ({props}) => {
             <div className={'featured'}>
                 {Produits}
             </div>
-            <div className="container-calltoaction"><a href="/shop/all" className="btn-calltoaction"><span>Boutique</span></a></div>
+            <div className="container-calltoaction"><Link to={"/shop/all"} className="btn-calltoaction"><span>Boutique</span></Link></div>
         </div>
     );
 }

@@ -1,0 +1,121 @@
+.container-featured{
+    position:relative;
+    margin-top: 3.5rem;
+}
+.featured{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    & > div{
+        width: 16.6667%;
+        padding: 1rem;
+        box-sizing: border-box;
+        display: flex;
+        //flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (max-width: @largedesktop) {
+            width: 25%;
+        }
+
+        @media screen and (max-width: @laptop) {
+            width: 33.33%;
+        }
+
+        @media screen and (max-width: @tablet) {
+            width: 50%;
+        }
+
+        @media screen and (max-width: @phablet) {
+            width: 100%;
+        }
+    }                           
+}
+.container-calltoaction{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 1rem;
+}
+.container-categorie{
+    margin-top: 3.5rem;
+}
+.categorie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    & > div{
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        box-sizing: border-box;
+
+        @media screen and (max-width: @laptop) {
+            width: 50%;
+        }
+
+        & > a{
+            display: block;
+            width: 100%;
+            padding-bottom: 100%;
+            position: relative;
+            border-radius: 4px;
+            box-shadow: 2px 2px 6px @shadow;
+
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            -webkit-transition: background 0.25s ease; /* Safari */
+            transition: background 0.25s ease;
+
+            span{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:hover{
+                background-size: 110% 110%;
+            }
+        }
+
+        &:first-child a{                
+            background-image: linear-gradient(to bottom, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/movies_cat.jpg);
+            background-image: -moz-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/movies_cat.jpg);
+            background-image: -o-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/movies_cat.jpg);
+            background-image: -ms-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/movies_cat.jpg);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(74, 74, 74, 0.75)), to(rgba(74, 74, 74, 0.75))), url(../sources/images/movies_cat.jpg);
+            background-image: -webkit-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/movies_cat.jpg);                
+        }
+        &:nth-child(2) a{
+            background-image: linear-gradient(to bottom, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/games_cat.jpg);
+            background-image: -moz-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/games_cat.jpg);
+            background-image: -o-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/games_cat.jpg);
+            background-image: -ms-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/games_cat.jpg);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(74, 74, 74, 0.75)), to(rgba(74, 74, 74, 0.75))), url(../sources/images/games_cat.jpg);
+            background-image: -webkit-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/games_cat.jpg);
+        }
+        &:nth-child(3) a{
+            background-image: linear-gradient(to bottom, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/popart_cat.jpg);
+            background-image: -moz-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/popart_cat.jpg);
+            background-image: -o-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/popart_cat.jpg);
+            background-image: -ms-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/popart_cat.jpg);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(74, 74, 74, 0.75)), to(rgba(74, 74, 74, 0.75))), url(../sources/images/popart_cat.jpg);
+            background-image: -webkit-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/popart_cat.jpg);
+        }
+        &:last-child a{
+            background-image: linear-gradient(to bottom, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/quotes_cat.jpg);
+            background-image: -moz-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/quotes_cat.jpg);
+            background-image: -o-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/quotes_cat.jpg);
+            background-image: -ms-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/quotes_cat.jpg);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(74, 74, 74, 0.75)), to(rgba(74, 74, 74, 0.75))), url(../sources/images/quotes_cat.jpg);
+            background-image: -webkit-linear-gradient(top, rgba(74, 74, 74, 0.75), rgba(74, 74, 74, 0.75)), url(../sources/images/quotes_cat.jpg);
+        }
+    }
+}
