@@ -7,7 +7,6 @@ import {Link} from 'react-router-dom'
 const Fetch = (props) => {
     var Produits = [];
     var donnees = 'data='+props.Categorie;
-    var srcBackground = '';
 
     $.ajax({
 
@@ -19,9 +18,9 @@ const Fetch = (props) => {
         cache: false,
         success: function(result){
             Produits = $.map(result.posters, function (value, index) {
-                srcBackground ={
+                const srcBackground = {
                     backgroundImage: 'url("../'+value.img+'.jpg")'
-                }
+                };
                 return (
                     <div key={value.id}>
                         <Link to={"/product/"+value.id}><div className="img-affiche" style={srcBackground}><span>${value.prix}</span></div></Link>                        

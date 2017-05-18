@@ -18,7 +18,6 @@ const Fetch = (props) => {
     var cat = "";
     var nomCat = "";
     var slugCat = "";
-    var srcBackground = '';
     var donnees = 'data='+props.Identifiant;
     $.ajax({
 
@@ -38,7 +37,7 @@ const Fetch = (props) => {
             haut = result['hauteur'];
             Url = result['url'];
             cat = result['categorie'];
-            
+
             switch (cat){
                 case '1':
                     nomCat = "Film";
@@ -56,6 +55,8 @@ const Fetch = (props) => {
                     nomCat = "Citations";
                     slugCat = "/shop/citations";
                     break;
+                default:
+                    break;
                        }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -63,24 +64,41 @@ const Fetch = (props) => {
         },
         async: false
     });
-    srcBackground ={
+
+    const srcBackground = { 
         backgroundImage: 'url("../'+Img+'.jpg")'
-    }
+    };
+
     return (
         <div>
-            <h2>{Titre}</h2>
+            <Link to={slugCat} className="btnRetour"><span><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 459 459">
+                <title>Icone Flèche</title>
+                <g>
+                    <g id="reply">
+                        <path d="M178.5,140.25v-102L0,216.75l178.5,178.5V290.7c127.5,0,216.75,40.8,280.5,130.05C433.5,293.25,357,165.75,178.5,140.25z"
+                            />
+                    </g>
+                </g>
+                </svg></span>Retour à la boutique</Link>
             <div className="container-info">
+
                 <div className="img-affiche left" style={srcBackground}></div>
                 <div className="Right">
+                    <h2>{Titre}</h2>
                     <div className="container-auteur">Auteur: <span className="auteur">{aut}</span></div>
-                    <div className="cat"><Link to={slugCat}>{nomCat}</Link></div>
+                    <div className="cat">Catégorie: <Link to={slugCat} className="link">#{nomCat}</Link></div>
                     <div className="dimension">
                         <span className="dim-title">Dimensions</span>
-                        <span className="larg">Largeur: {larg}"</span>
-                        <span className="haut">Hauteur: {haut}"</span>
+                        <div className="dim">
+                            <span className="larg">Largeur: {larg}"</span>
+                            <span className="haut">Hauteur: {haut}"</span>
+                        </div>
                     </div>
-                    <p>{Description}</p>
-                    <span>{Prix}</span>
+                    <div className="details">
+                        <span className="det-title">Détails</span>
+                        <p>{Description}</p>
+                    </div>                    
+                    <span className="prix">${Prix}</span>
                     <button className="snipcart-add-item"
                         data-item-id={ID}
                         data-item-name={Titre}

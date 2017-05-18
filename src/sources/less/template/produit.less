@@ -1,30 +1,161 @@
 .Product{
-    h2{
-        margin-top: 5rem;
+    margin-top: 5rem;
+
+    .btnRetour{
+        width: auto;
+        font-size: 18px;
+        color: @rose;
+        //display: flex;
+        //align-items: center;
+        -webkit-transition: all 0.25s ease; /* Safari */
+        transition: all 0.25s ease;
+
+        span svg{
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 1rem;
+            width: 20px;
+            height: 20px;
+
+            path{
+                fill: @rose;
+                -webkit-transition: all 0.25s ease; /* Safari */
+                transition: all 0.25s ease;
+            }
+        }
+
+        &:hover{
+            color: darken(@rose, 10%);
+
+            span svg path{
+                fill: darken(@rose, 10%);
+            }
+        }
     }
-    
+
+    h2{
+        margin-top: 0;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
     .container-info{
         margin-top: 3.5rem;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap;        
     }
-    
+
     .img-affiche{
+        margin-right: 4.5rem;
         width: 337.5px;
         height: 450px;
+
+        @media screen and (max-width: @laptop) {
+            width: 225px;
+            height: 300px;
+        }
     }
-    
+
     .img-affiche:hover:before{
         opacity: 0;
     }
-    
+
     .Right{        
         position: relative;
+        //margin-left: 5rem;        
+        min-height: 375px;
+        
+        @media screen and (max-width: @tablet) {
+            //min-height: 550px;
+            margin-top: 2rem;
+        }
     }
-    
+
+    .container-auteur{
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 1rem;
+
+        .auteur{
+            font-weight: bolder;
+        }
+    }
+
+    .cat{
+        font-size: 16px;
+        font-weight: normal;
+        margin-bottom: 1rem;
+
+        a{
+            font-weight: bolder;
+            color: @noir;
+            text-decoration: none;
+
+            -webkit-transition: all 0.25s ease; /* Safari */
+            transition: all 0.25s ease;
+
+            &:after{
+                margin-top: 0;
+            }
+
+            &:hover{
+                color: @rose;
+            }
+        }
+    }
+
+    .dimension{
+        width: 250px;
+        //background: @blancPure;
+        border-radius: 4px;
+        //padding: 1rem;
+        font-size: 16px;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        //box-shadow: 2px 2px 6px @shadow;
+
+        .dim-title{
+            width: 100%;
+            font-weight: bolder;
+            text-decoration: underline;
+            margin-bottom: 0.5rem;
+            font-size: 17px;
+        }
+
+        .larg{
+            margin-right: 2rem;
+        }
+    }
+
+    .details{
+        margin-top: 1.5rem;
+
+        .det-title{
+            font-size: 16px;
+            text-decoration: underline;
+            font-weight: bolder;
+            margin-bottom: 0.5rem;
+            font-size: 17px;
+        }
+
+        p{
+            margin-top: 0;
+            max-width: 450px;
+        }
+    }
+
+    .prix{
+        font-size: 24px;
+        font-weight: bolder;
+        color: @rose;
+    }
+
     .snipcart-add-item{
         position: absolute;
         bottom: 0;
+        left: 0;
     }
 
 }

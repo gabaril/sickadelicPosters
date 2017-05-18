@@ -11,13 +11,6 @@ html {
     font-size: 62.5%;
 }
 
-h1 {
-    font-family: @fontTitre;
-    color:@noir;
-    font-size: 6rem;
-    font-weight: bolder;
-    text-transform: uppercase;
-}
 h2{
     font-family: @fontTitre;
     color:@noir;
@@ -25,18 +18,35 @@ h2{
     line-height: 6rem;
     font-weight: bolder;
     text-transform: uppercase;
+
+    @media screen and (max-width: @tablet) {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    
+    @media screen and (max-width: @tablet) {
+        font-size: 3.25rem;
+        line-height: 3.25rem;
+    }
 }
+
 h3{
     font-family: @fontTitre;
     color: @noir;
-    font-size:3rem;
-    line-height: 3rem;
+    font-size:3.5rem;
+    line-height: 3.5rem;
+    
+    @media screen and (max-width: @tablet) {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+    
+    @media screen and (max-width: @tablet) {
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+    }
 }
-h4{
-    font-family: @fontTitre;
-    color: @noir;
-    font-size: 2rem;
-}
+
 label{
     font-family: @fontTexte;
     font-weight: 200;

@@ -13,6 +13,10 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
-        <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="NDE2ZDI5MzEtYjI0OC00MDVlLTk2NDItY2EyMDNlNDg1M2JhNjM2Mjk4MDIzNTM2MjE4ODQ5"></script>
+        <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="NDE2ZDI5MzEtYjI0OC00MDVlLTk2NDItY2EyMDNlNDg1M2JhNjM2Mjk4MDIzNTM2MjE4ODQ5">
+            document.addEventListener('snipcart.ready', function() {
+                Snipcart.DEBUG = false;
+            });
+        </script>
     </body>
 </html>

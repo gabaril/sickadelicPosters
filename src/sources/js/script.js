@@ -1,6 +1,9 @@
 import $ from 'jquery';
 var alpha = 0;
+var timer = '';
+
 $(document).ready(function($){
+    
     // ----- INIT -----
     if($(window).width() >= 800){
         $('nav .nav-mobile, .voile').removeAttr("style");
@@ -37,7 +40,7 @@ $(document).ready(function($){
             $('body').removeClass('disabled');
             $('.logo-mobile').removeClass('clickable');
             $('.col').removeClass('active');
-            var timer = setInterval(function(){
+            timer = setInterval(function(){
                 alpha -= 0.00625;
                 $('.voile').css('opacity', alpha);
             }, 9.375);
@@ -55,7 +58,7 @@ $(document).ready(function($){
             $('.col').addClass('active');
             $('.logo-mobile').addClass('clickable');
             $('.voile').css('display', 'block');
-            var timer = setInterval(function(){
+            timer = setInterval(function(){
                 alpha += 0.00625;
                 $('.voile').css('opacity', alpha);
             }, 9.375);

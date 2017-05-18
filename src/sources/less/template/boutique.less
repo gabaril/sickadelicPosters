@@ -2,8 +2,8 @@
     margin-top: 5rem;
 
     h3{
-        font-size: 4rem;
-        margin-bottom: 3rem;
+        //font-size: 4rem;
+        //margin-bottom: 3rem;
     }
 
     .container-boutique{
@@ -30,11 +30,21 @@
         @media screen and (max-width: @desktop) {
             width: 100%;
         }
-        
+
         h3{
-            font-size: 24px;
+            font-size: 2.5rem;
             margin-bottom: 0;
             text-decoration: underline;
+
+            @media screen and (max-width: @tablet) {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+
+            @media screen and (max-width: @tablet) {
+                font-size: 2rem;
+                line-height: 2rem;
+            }
         }
 
         .categorie{
@@ -68,7 +78,7 @@
                         }
                     }
                 }
-                
+
                 &.current a span{
                     color: @rose;
                 }
@@ -79,7 +89,7 @@
     .container-boutique-produits{
         margin-top: 3.5rem;
         //display: flex;
-        
+
         h3{
             display: flex;
             align-items: center;
@@ -120,7 +130,7 @@
                 @media screen and (max-width: @desktop) {
                     width: 25%;
                 }
-                
+
                 @media screen and (max-width: @laptop) {
                     width: 33.33%;
                 }

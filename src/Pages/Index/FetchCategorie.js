@@ -18,15 +18,15 @@ const Fetch = ({props}) => {
             Categories = $.map(result.categorie, function (value, index) {
                 return (
                     <div key={value.id}>
-                    <Link to={"/shop/"+value.slug}><div className="img-categories"><span className="cat_title">{value.categorie}</span></div></Link>
+                        <Link to={"/shop/"+value.slug}><div className="img-categories"><span className="cat_title">{value.categorie}</span></div></Link>
                     </div>);
-                    });
-            },
-                               error: function(XMLHttpRequest, textStatus, errorThrown) {
-                console.log(errorThrown);
-            },
-                async: false
-        });
-        return (<div className={'container-categorie'}><div className={'categorie'}>{Categories}</div></div>);
-           }
-           export default Fetch;
+            });
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+            console.log(errorThrown);
+        },
+        async: false
+    });
+    return (<div className={'container-categorie'}><div className={'categorie'}>{Categories}</div></div>);
+}
+export default Fetch;

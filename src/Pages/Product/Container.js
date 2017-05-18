@@ -9,6 +9,7 @@ export default class ProductContainer extends React.Component {
     constructor({props}){
         super(props);
     }
+
     render() {
         return <ProductUI Data={<Fetch Identifiant={this.props.match.params.article}/>}/>;
     }

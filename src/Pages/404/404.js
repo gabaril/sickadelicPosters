@@ -3,12 +3,12 @@
  */
 import React from "react";
 
-export default class Contact extends React.Component {
+export default class notFound extends React.Component {
     render() {
         //console.log("settings");
         return (
             <div>
-                <h1>Besoin d'aide?</h1>
+                <h1>Page introuvable</h1>
             </div>
         );
     }
