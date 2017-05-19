@@ -25,19 +25,19 @@ sickadelicPosters/
     css/                // Dossier contenant les fichiers css compilés
     js/                 // Dossier contenant les scripts JS compilés
     Pages/
-      404/              // Dossier contenant les composants React en lien avec la page 404
-      About/            // Dossier contenant les composants React en lien avec la page À propos
-      Contact/          // Dossier contenant les composants React en lien avec la page Contact
-      Index/            // Dossier contenant les composants React en lien avec la page d'Accueil
-      Product/          // Dossier contenant les composants React en lien avec la page d'information sur un produit
-      Shop/             // Dossier contenant les composants React en lien avec la page Boutique
-    php/                // Dossier contenant une copie des différents API que j'ai créé et qui sont actuellement hébergé sur un serveur externe
+      404/              // Composants React en lien avec la page 404
+      About/            // Composants React en lien avec la page À propos
+      Contact/          // Composants React en lien avec la page Contact
+      Index/            // Composants React en lien avec la page d'Accueil
+      Product/          // Composants React en lien avec la page de Produit
+      Shop/             // Composants React en lien avec la page Boutique
+    php/                // Dossier contenant une copie des différents API
     sources/
       images/
       js/               // Dossier contenant les scripts JS non compilés
-      less/             // Dossier contenant tous les fichiers less utilisés pour le projet
-      sass/             // Dossier contenant les fichiers sass sources et css compilés pour la personnalisation du thème SnipCart
-      snipcart-theme/   // Dossier contenant une copie de ma branche du github de Snipcart utilisé pour la personnalisation du thème
+      less/             // Dossier contenant tous les fichiers less
+      sass/             // Personnalisation du thème Snipcart
+      snipcart-theme/   // Fork de snipcart-theme
         
 ```
 
