@@ -1,4 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+Ce projet a été instaurer à l'aide de [Create React App](https://github.com/facebookincubator/create-react-app).
+
+## Structure de dossier
+
+```
+sickadelicPosters/
+  README.md
+  grunt/            // Utiliser pour compiler less
+    gruntfile.js
+    node_modules/
+    package.json
+    README.md
+  node_modules/
+  package.json
+  public/
+    index.html      // Page HTML dans lequel sera rendu l'application
+    favicon.ico
+    img/
+  src/
+    App.css
+    App.js
+    App.test.js
+    index.css
+    index.js
+    logo.svg
+```
+
+
+
+
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
