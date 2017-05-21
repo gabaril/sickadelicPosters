@@ -11,7 +11,7 @@ const Fetch = (props) => {
     $.ajax({
 
         url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchAll.php",
-        //url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchAll.php",
+        url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchAll.php",
         type:"GET",
         data: donnees,
         dataType: 'json',

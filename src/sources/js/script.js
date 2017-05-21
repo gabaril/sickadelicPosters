@@ -37,7 +37,7 @@ $(document).ready(function($){
     // ----- CLICK -----
     $('.col, .nav-mobile a').click(function(){
         if($('.col').hasClass('active')){
-            $('body').removeClass('disabled');
+            $('#root').removeClass('disabled');
             $('.logo-mobile').removeClass('clickable');
             $('.col').removeClass('active');
             timer = setInterval(function(){
@@ -54,7 +54,7 @@ $(document).ready(function($){
             });
         }
         else{
-            $('body').addClass('disabled');
+            $('#root').addClass('disabled');
             $('.col').addClass('active');
             $('.logo-mobile').addClass('clickable');
             $('.voile').css('display', 'block');
