@@ -9,8 +9,8 @@ const Fetch = ({props}) => {
 
     $.ajax({
 
-        url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchCategorie.php",
-        //url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchCategorie.php",
+        //url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchCategorie.php",
+        url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchCategorie.php",
         type:"POST",
         dataType: 'json',
         cache: false,
@@ -18,7 +18,7 @@ const Fetch = ({props}) => {
             Categories = $.map(result.categorie, function (value, index) {
                 return (
                     <div key={value.id} className={value.slug+' slug'}>
-                        <Link to={"/shop/"+value.slug} className="link"><span className="cat_title">#{value.categorie}</span></Link>
+                        <Link to={"/shop/"+value.slug}><span className="cat_title">#{value.categorie}</span></Link>
                     </div>);
             });
         },
@@ -27,6 +27,6 @@ const Fetch = ({props}) => {
         },
         async: false
     });
-    return (<div className={'categorie'}><div className="all slug"><Link to={"/shop/all"} className="link"><span className="cat_title">#Tous</span></Link></div>{Categories}</div>);
+    return (<div className={'categorie'}><div className="all slug"><Link to={"/shop/all"}><span className="cat_title">#Tous</span></Link></div>{Categories}</div>);
 }
 export default Fetch;

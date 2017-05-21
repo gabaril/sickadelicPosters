@@ -58,6 +58,8 @@ module.exports = function (grunt) {
       // Tâche lors de changements des fichiers images sources
       images: {
         files: ['<%= config.chemin %>/sources/images/*.*'],
+        //files: ['<%= config.root %>/public/img/medium/*.*'],
+        //files: ['<%= config.root %>/public/img/large/*.*'],
         tasks: ['imagemin']
       },
 
@@ -139,7 +141,7 @@ module.exports = function (grunt) {
             },
             files: [{
                 expand: true,
-                cwd: '<%= config.chemin %>/sources/images/',
+                cwd: '<%= config.chemin %>/sources/images/large',
                 src: ['**/*.{png,jpg,gif,svg}'],
                 dest: '<%= config.chemin %>/images/'
             }]

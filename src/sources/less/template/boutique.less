@@ -1,21 +1,17 @@
-.shop{
+.shop {
     margin-top: 5rem;
-
-    h3{
+    h3 {
         //font-size: 4rem;
         //margin-bottom: 3rem;
     }
-
-    .container-boutique{
+    .container-boutique {
         display: flex;
         justify-content: space-between;
-
         @media screen and (max-width: @desktop) {
             flex-direction: column;
         }
     }
-
-    .container-boutique-categories{
+    .container-boutique-categories {
         margin-top: 3.5rem;
         margin-right: 10rem;
         width: 25%;
@@ -23,79 +19,70 @@
         height: auto;
         background: @blancPure;
         padding: 2rem;
-        max-height: 300px;
+        max-height: 315px;
         border-radius: 4px;
         box-shadow: 2px 2px 6px @shadow;
-
         @media screen and (max-width: @desktop) {
             width: 100%;
         }
-
-        h3{
+        h3 {
             font-size: 2.5rem;
             margin-bottom: 0;
             text-decoration: underline;
-
             @media screen and (max-width: @tablet) {
                 font-size: 2rem;
                 line-height: 2.5rem;
             }
-
             @media screen and (max-width: @tablet) {
                 font-size: 2rem;
                 line-height: 2rem;
             }
         }
-
-        .categorie{
+        .categorie {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-
-            div{
-                padding-top: 0.5rem;
+            margin-top: 2rem;
+            div {
+                padding: 0.5rem 1rem;
                 width: 100%;
                 justify-content: flex-start;
-
-                a{
+                a {
                     background: none;
                     box-shadow: none;
-                    padding-bottom: 0;
+                    padding-bottom: 0.5rem;
                     width: auto;
                     text-decoration: none;
-
-                    span{
+                    &:before {
+                        content: none;
+                    }
+                    span {
                         color: @noir;
                         position: relative;
                         left: 0;
                         top: 0;
                         transform: none;
-                        -webkit-transition: all 0.25s ease; /* Safari */
+                        -webkit-transition: all 0.25s ease;
+                        /* Safari */
                         transition: all 0.25s ease;
-
-                        &:hover{
+                        &:hover {
                             color: @rose;
                         }
                     }
                 }
-
-                &.current a span{
+                &.current a span {
                     color: @rose;
                 }
             }
-        }        
+        }
     }
-
-    .container-boutique-produits{
-        margin-top: 3.5rem;
-        //display: flex;
-
-        h3{
+    .container-boutique-produits {
+        margin-top: 3.5rem; //display: flex;
+        h3 {
             display: flex;
             align-items: center;
         }
-
-        .tag{
+        .tag {
             margin-left: 2rem;
             padding: 1.25rem 4rem;
             border-radius: 4px;
@@ -104,45 +91,37 @@
             font-size: 18px;
             box-shadow: 2px 2px 6px @shadow;
         }
-
-        & > div {
+        &>div {
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
-
-            & > div{
+            margin-top: 3.5rem;
+            &>div {
                 width: 25%;
                 padding: 1rem;
                 box-sizing: border-box;
-                display: flex;
-                //flex-wrap: nowrap;
+                display: flex; //flex-wrap: nowrap;
                 flex-direction: column;
                 align-items: center;
-
                 @media screen and (max-width: @largedesktop) {
                     //width: 20%;
                 }
-
                 @media screen and (max-width: 1500px) {
                     width: 33.33%;
                 }
-
                 @media screen and (max-width: @desktop) {
                     width: 25%;
                 }
-
                 @media screen and (max-width: @laptop) {
                     width: 33.33%;
                 }
-
                 @media screen and (max-width: @tablet) {
                     width: 50%;
                 }
-
                 @media screen and (max-width: @phablet) {
                     width: 100%;
                 }
-            }                           
-        }                           
+            }
+        }
     }
 }

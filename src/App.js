@@ -104,6 +104,7 @@ const Footer = () => (
 );
 
 class App extends React.Component {
+
     render() {
         return (
             <div className="wrap">

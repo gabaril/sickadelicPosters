@@ -1,63 +1,86 @@
-.snipcart-user-profile{
-    padding: 1.25rem 4rem;
-    background: @blanc;
-    border-radius: 4px;
-    color: @rose;
-    -webkit-transition: all 0.25s ease; /* Safari */
+// bouton mon compte
+.snipcart-user-profile {
+    color: @blancPure;
+    position: relative;
+    -webkit-transition: all 0.25s ease;
+    /* Safari */
     transition: all 0.25s ease;
+
+    @media screen and (max-width: @tablet) {
+        color: @noir;
+    }
 }
 
-.btn-calltoaction{
+.snipcart-user-profile:hover {
+    @media screen and (max-width: @tablet) {
+        color: @rose;
+    }
+}
+
+// bouton accueil call to action
+.btn-calltoaction {
     padding: 1.5rem 10rem;
     background-color: @rose;
     border-radius: 4px;
     box-shadow: 2px 2px 6px @shadow;
-
-    -webkit-transition: all 0.25s ease; /* Safari */
+    -webkit-transition: all 0.25s ease;
+    /* Safari */
     transition: all 0.25s ease;
-
     -webkit-animation: attention 6s ease infinite;
     -moz-animation: attention 6s ease infinite;
     animation: attention 6s ease infinite;
 }
 
-.btn-calltoaction:hover{
+.btn-calltoaction:hover {
     background-color: darken(@rose, 10%);
 }
 
-.link{
+// tous les éléments a contenant une animation de underline
+.link {
     position: relative;
-    -webkit-transition: all 0.25s ease; /* Safari */
+    -webkit-transition: all 0.25s ease;
+    /* Safari */
     transition: all 0.25s ease;
 }
 
-.link:hover{
+.link:hover {
     color: @rose;
 }
 
-.link:after{
+.link:after, .slug span:after, .current span:after, .snipcart-user-profile:after {
     content: '';
     position: absolute;
-    width: 0; height: 3px;
+    width: 0;
+    height: 3px;
     display: block;
-    margin-top: 2.5px;
+    margin-top: 0px;
     right: 0;
     background: @noir;
     transition: all .25s ease;
     -webkit-transition: all .25s ease;
+
+    @media screen and (max-width: @tablet) {
+        content: none;
+    }
 }
 
-.slug .link:after{
-    margin-top: 0px;
+.snipcart-user-profile:after{
+    background: @blanc;
 }
 
-.link:hover:after, .current .link:after{
+.link:hover:after, .slug span:hover:after, .current span:after, .snipcart-user-profile:hover:after {
     width: 100%;
     left: 0;
     background: @rose;
 }
 
-input[type='submit'], .snipcart-add-item{
+.snipcart-user-profile:hover:after{
+    background: @blanc;
+}
+
+// bouton submit formulaire + bouton ajout de panier de page produit
+input[type='submit'],
+.snipcart-add-item {
     outline: none;
     border: none;
     width: auto;
@@ -66,11 +89,12 @@ input[type='submit'], .snipcart-add-item{
     border-radius: 4px;
     background: @rose;
     box-shadow: 2px 2px 6px @shadow;
-    
-    -webkit-transition: all 0.25s ease; /* Safari */
+    -webkit-transition: all 0.25s ease;
+    /* Safari */
     transition: all 0.25s ease;
 }
 
-input[type='submit']:hover, .snipcart-add-item:hover{
+input[type='submit']:hover,
+.snipcart-add-item:hover {
     background-color: darken(@rose, 10%);
 }
