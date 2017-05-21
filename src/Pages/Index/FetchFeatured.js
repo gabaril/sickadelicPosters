@@ -18,7 +18,7 @@ const Fetch = ({props}) => {
         success: function(result){
             Produits = $.map(result.posters, function (value, index) {
                 const srcBackground ={
-                    backgroundImage: 'url("../'+value.img+'.jpg")'
+                    backgroundImage: 'url("../img/medium/'+value.img+'")'
                 };
                 return (
                     <div key={value.id}>

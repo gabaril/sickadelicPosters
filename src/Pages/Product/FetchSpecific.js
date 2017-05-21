@@ -66,7 +66,7 @@ const Fetch = (props) => {
     });
 
     const srcBackground = { 
-        backgroundImage: 'url("../'+Img+'.jpg")'
+        backgroundImage: 'url("../img/large/'+Img+'")'
     };
 
     return (
