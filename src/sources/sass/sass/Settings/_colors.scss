@@ -46,15 +46,17 @@ $palettes: (
         label-color: #9E9E9E
     ),
     header: (
-        background: #fbfbfb,
-        background--highlight: #d34163,
+        background: #ffffff,
+        background--highlight: #fbfbfb,
+        backgroundBack--highlight: #d34163,
         color: #fbfbfb,
+        color--highlight: #d34163,
         label-color: #fbfbfb
     ),
     layout: (
         background: #fff,
         border: #E0E0E0,
-        close-color: #fbfbfb,
+        close-color: #2b2b2b,
         color: #9E9E9E,
         content-background: #f8f8f8,
         content-border: #BDBDBD,

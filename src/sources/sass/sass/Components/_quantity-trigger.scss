@@ -9,6 +9,7 @@
     [3]. You can choose your own symbol (or even custom icon font) for add and remove product.
 */
 
+
 /*------------------------------------*\
     LOCAL VARIABLES
 \*------------------------------------*/
@@ -16,7 +17,6 @@
 // [3]
 $_qt-text-add: "+";
 $_qt-text-remove: "-";
-
 
 /*------------------------------------*\
     STYLE
@@ -52,11 +52,9 @@ $_qt-text-remove: "-";
     line-height: 1.6;
     height: 1em;
     width: 1em;
-
     &:hover {
-      background-color: palette(button, background--highlight-hover);
+        background-color: palette(button, background--highlight-hover);
     }
-
     &:before {
         display: block;
         height: 1em;
@@ -74,15 +72,23 @@ $_qt-text-remove: "-";
     font-weight: 400;
     height: 1em;
     width: 1em;
-
+    @media screen and (max-width: 800px) {
+        height: 2em;
+        width: 2em;
+    }
     &:hover {
         background-color: palette(quantity-trigger, background--hover);
     }
-
     &:before {
         display: block;
         height: 1em;
         width: 1em;
+
+        @media screen and (max-width: 800px) {
+            height: 2em;
+            width: 2em;
+            margin-top: 0.5em;
+        }
     }
 }
 
@@ -106,7 +112,6 @@ $_qt-text-remove: "-";
     background-color: palette(quantity-trigger, background--disabled);
     color: palette(quantity-trigger, color--disabled);
     cursor: default;
-
     &:hover {
         background-color: palette(quantity-trigger, background--disabled);
     }

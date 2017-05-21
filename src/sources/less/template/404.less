@@ -1,0 +1,58 @@
+.notFound {
+    h2 {
+        margin-top: 5rem;
+        margin-bottom: 3.5rem;
+    }
+    .btnRetour {        
+        width: auto;
+        font-size: 18px;
+        color: @rose; //display: flex;
+        //align-items: center;
+        -webkit-transition: all 0.25s ease;
+        /* Safari */
+        transition: all 0.25s ease;
+        span svg {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 1rem;
+            width: 20px;
+            height: 20px;
+            path {
+                fill: @rose;
+                -webkit-transition: all 0.25s ease;
+                /* Safari */
+                transition: all 0.25s ease;
+            }
+        }
+        &:hover {
+            color: darken(@rose, 10%);
+            span svg path {
+                fill: darken(@rose, 10%);
+            }
+        }
+    }
+
+    .gif{
+        margin-top: 1rem;
+        position: relative;
+        width: 100%;
+        padding-bottom: 51%;
+
+        span{
+            font-family: @fontTitre;
+            font-size: 10em;
+            color: @rose;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+
+        iframe{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

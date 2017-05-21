@@ -42,7 +42,7 @@ $_header-total-height: 38px;
 
 // [1]
 #snipcart-current-user{
-    box-shadow: 0px 0px 1px #2b2b2b;
+    //box-shadow: 0px 0px 1px #2b2b2b;
 }
 .snip-header__user {
     background: palette(header, background--highlight);
@@ -58,7 +58,7 @@ $_header-total-height: 38px;
     text-overflow: ellipsis;
     white-space: nowrap;
     margin: auto;
-    color: palette(header, color);
+    color: palette(header, color--highlight);
     font-weight: bolder;
 }
 
@@ -84,7 +84,7 @@ $_header-total-height: 38px;
 
 
 .snip-header__user-mail {
-    color: palette(header, color);
+    color: palette(header, color--highlight);
 }
 
 .snip-header__title {
@@ -108,7 +108,7 @@ $_header-total-height: 38px;
 }
 
 .snip-header__total {
-    background: palette(header, background--highlight);
+    background: palette(header, backgroundBack--highlight);
     border-radius: 5px;
     display: inline-block;
     padding: .5em;

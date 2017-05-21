@@ -415,20 +415,24 @@ h4,
     background: #fff;
     margin: 0 auto;
     max-width: 62.25em;
-    position: relative; }
+    position: relative;
+    border-radius: 4px; }
   .snip-layout .snip-layout__close {
-    color: #fbfbfb;
-    font-size: 1.8em;
+    color: #2b2b2b;
+    font-size: 3.6em;
     padding: .333em;
     padding: 0;
     position: absolute;
     right: .417em;
-    top: .1em;
-    z-index: 2; }
-    @media only screen and (min-width: 48em) {
+    margin-top: 0.5em;
+    z-index: 2;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
+    @media screen and (max-width: 800px) {
       .snip-layout .snip-layout__close {
-        font-size: 1.5em;
-        top: .208em; }
+        font-size: 3em;
+        top: .208em;
+        right: 0.2em !important; }
         .snip-layout .snip-layout__close.js-hidden {
           display: none; } }
   .snip-layout .snip-layout__loading {
@@ -454,7 +458,7 @@ h4,
     box-shadow: 0px 0px 1px #2b2b2b; }
   .snip-layout .snip-header {
     font-weight: 700;
-    background: #fbfbfb;
+    background: #ffffff;
     color: #fbfbfb;
     padding: 1em;
     position: relative;
@@ -466,10 +470,8 @@ h4,
         height: 105px;
         padding: 0;
         text-align: center; } }
-  .snip-layout #snipcart-current-user {
-    box-shadow: 0px 0px 1px #2b2b2b; }
   .snip-layout .snip-header__user {
-    background: #d34163;
+    background: #fbfbfb;
     font-size: 14px;
     padding: 2rem;
     text-align: center; }
@@ -479,7 +481,7 @@ h4,
     text-overflow: ellipsis;
     white-space: nowrap;
     margin: auto;
-    color: #fbfbfb;
+    color: #d34163;
     font-weight: bolder; }
   .snip-layout .snip-header__back {
     overflow: hidden;
@@ -487,7 +489,7 @@ h4,
     white-space: nowrap;
     display: -webkit-box;
     display: flex;
-    background: #d34163;
+    background: #fbfbfb;
     font-size: 14px;
     padding: .714em 1.429em; }
   .snip-layout .snip-header__back--button {
@@ -497,7 +499,7 @@ h4,
   .snip-layout .snip-header__back--button:hover {
     color: #fbfbfb; }
   .snip-layout .snip-header__user-mail {
-    color: #fbfbfb; }
+    color: #d34163; }
   .snip-layout .snip-header__title {
     display: none;
     font-size: 15px;
@@ -824,12 +826,21 @@ h4,
     font-weight: 400;
     height: 1em;
     width: 1em; }
+    @media screen and (max-width: 800px) {
+      .snip-layout .snip-quantity-trigger__btn {
+        height: 2em;
+        width: 2em; } }
     .snip-layout .snip-quantity-trigger__btn:hover {
       background-color: #b72a4b; }
     .snip-layout .snip-quantity-trigger__btn:before {
       display: block;
       height: 1em;
       width: 1em; }
+      @media screen and (max-width: 800px) {
+        .snip-layout .snip-quantity-trigger__btn:before {
+          height: 2em;
+          width: 2em;
+          margin-top: 0.5em; } }
   .snip-layout .snip-quantity-trigger__btn--add:before {
     content: "+";
     line-height: 1em; }

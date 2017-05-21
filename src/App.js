@@ -75,7 +75,6 @@ const Navigation = () => (
                         <div className="voile"></div>
                     </div>
                 </nav>
-                <div className="banniere"></div>
             </header>
             <main className="container-page">
                 <Switch>
