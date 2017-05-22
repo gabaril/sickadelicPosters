@@ -28,17 +28,17 @@
                 display: none;
             }
         }
-        h3{
+        h3 {
             margin-bottom: 1rem;
         }
-        .retroaction{
+        .retroaction {
             font-size: 16px;
             font-family: @fontTexte;
             color: #00E676;
         }
         .container-form {
             width: 50%;
-            height: 850px;
+            min-height: 850px;
             padding: 5rem 4rem;
             background: @blancPure;
             border-radius: 4px;
@@ -49,16 +49,23 @@
             @media screen and (max-width: @tablet) {
                 width: 100%;
                 padding: 5rem 5%;
-                height: auto;
+                min-height: 0;
             }
         }
         form {
             display: flex;
             flex-direction: column;
+            justify-content: space-around;
             margin-top: 1rem;
+            @media screen and (max-width: @mobile) {
+                display: block;
+                width: 100%;
+            }
             label {
                 color: @gris;
-                margin-top: 2rem;
+                padding-top: 2rem;
+                padding-bottom: 0.25rem;
+                overflow: hidden;
             }
             input[type='text'],
             input[type='email'],
@@ -66,20 +73,25 @@
                 border-radius: 2px;
                 border: solid 1px @gris;
                 background: @blanc;
-                height: 3rem;
+                min-height: 3rem;
+                box-sizing: border-box;
                 outline: none;
                 padding: 0.5rem;
-                margin-top: 0.25rem;
                 font-family: @fontTexte;
                 font-size: 16px;
+                overflow: hidden;
                 -webkit-transition: all 0.25s ease;
                 /* Safari */
                 transition: all 0.25s ease;
+                @media screen and (max-width: @mobile) {
+                    width: 100%;
+                    margin-bottom: 2rem;
+                }
                 &:hover,
                 &:focus {
                     border: solid 1px @noir;
                 }
-                &:required{
+                &:required {
                     box-shadow: none;
                 }
             }
@@ -94,20 +106,27 @@
                 display: flex;
                 @media screen and (max-width: @mobile) {
                     flex-direction: column;
+                    justify-content: space-around;
+                    display: block;
                 }
                 &>div {
-                    margin-top: 2rem;
+                    //margin-top: 2rem;
                     display: flex;
                     flex-direction: column;
+                    justify-content: space-around;
                     width: 50%;
                     @media screen and (max-width: @mobile) {
                         width: 100%;
+                        display: block;
                     }
                     &:first-child {
                         margin-right: 2rem;
+                        @media screen and (max-width: @mobile) {
+                            margin-right: 0;
+                        }
                     }
-                    label{
-                        margin-top: 0;
+                    label {
+                        //margin-top: 0;
                     }
                 }
             }

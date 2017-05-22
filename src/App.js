@@ -1,11 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import { BrowserHistory } from 'react-router'
-//import PropTypes from 'prop-types'
 import './css/sickadelic.css';
 import './sources/sass/snipcart.min.css';
-//import './css/animista.css';
-import './sources/js/script.js';
+import './js/script.js';
 import Home from './Pages/Index/Home'
 import Shop from './Pages/Shop/Container'
 import About from './Pages/About/About'
