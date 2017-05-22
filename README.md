@@ -12,7 +12,6 @@ Ce projet fait utilisation du Boilerplate [Create React App](https://github.com/
 sickadelicPosters/
   README.md
   grunt/                // Utiliser pour compiler less
-  node_modules/
   package.json
   public/
     index.html          // Page HTML dans lequel sera rendu l'application
@@ -31,7 +30,7 @@ sickadelicPosters/
       Index/            // Composants React en lien avec la page d'Accueil
       Product/          // Composants React en lien avec la page de Produit
       Shop/             // Composants React en lien avec la page Boutique
-    php/                // Dossier contenant une copie des différents API
+    api/                // Dossier contenant une copie des différents API
     sources/
       images/
       js/               // Dossier contenant les scripts JS non compilés
