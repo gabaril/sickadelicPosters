@@ -10,8 +10,8 @@ const Fetch = ({props}) => {
 
     $.ajax({
 
-        url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchFeatured.php",
-        //url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchFeatured.php",
+        //url:"http://gabrielbaril.ca/sickadelic/Prod/ApiFetchFeatured.php",
+        url:"http://gabrielbaril.ca/sickadelic/Dev/ApiFetchFeatured.php",
         type:"POST",
         dataType: 'json',
         cache: false,
