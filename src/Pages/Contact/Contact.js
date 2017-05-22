@@ -55,7 +55,7 @@ export default class Contact extends React.Component {
         localStorage.setItem('Sujet', this.state.Subject);
         localStorage.setItem('Prenom', this.state.FirstName);
         localStorage.setItem('Nom', this.state.LastName);
-        localStorage.setItem('Email', this.state.Subject);
+        localStorage.setItem('Email', this.state.Email);
         localStorage.setItem('Honeypot', this.state.Honey);
         localStorage.setItem('Message', this.state.Message);
         localStorage.setItem('Retroaction', "L'envoie de votre message s'est déroulé avec succès.");
