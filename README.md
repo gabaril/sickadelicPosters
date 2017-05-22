@@ -42,7 +42,7 @@ sickadelicPosters/
 
 ## API
 
-Les API PHP utilisés pour ce projet sont tous de ma propre conception. Ils sont actuellement hébergés sur un serveur externe privé. Vous pouvez cependant retrouver une copie de ceux-ci dans le dossier `PHP/`.
+Les API PHP utilisés pour ce projet sont tous de ma propre conception. Ils sont actuellement hébergés sur un serveur externe privé. Vous pouvez cependant retrouver une copie de ceux-ci dans le dossier `API/`.
 
 ## ECommerce
 

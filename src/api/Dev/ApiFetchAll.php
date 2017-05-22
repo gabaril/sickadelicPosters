@@ -5,8 +5,8 @@
  * Date: 17-02-22
  * Time: 13:49
  */
-//header("Access-Control-Allow-Origin: http://localhost:3000");
-header("Access-Control-Allow-Origin: https://sickadelicposters.netlify.com");
+header("Access-Control-Allow-Origin: http://localhost:3000");
+//header("Access-Control-Allow-Origin: http://sickadelicposters.netlify.com");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, If-Modified-Since, Cache-Control, Pragma");
 
 require_once ('config.php');

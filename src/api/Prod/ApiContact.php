@@ -14,6 +14,24 @@ if(!empty($_POST['Honeypot'])){
   $msgerreur = "Le formulaire semble contenir des erreurs.";
 }
 
+//Sujet
+if(isset($_POST['Sujet'])){
+  $sujet = $_POST['Sujet'];
+}
+else{
+  $sujet = "";
+  $valide = false;
+}
+
+//prenom
+if(isset($_POST['Prenom'])){
+  $prenom = $_POST['Prenom'];
+}
+else{
+  $prenom = "";
+  $valide = false;
+}
+
 //nom
 if(isset($_POST['Nom'])){
   $nom = $_POST['Nom'];
@@ -44,13 +62,14 @@ else{
 if($valide){
   $to = 'sickadelic.posters@gmail.com';
   $msg = '
-    NOM: '.$nom.'
+    NOM: '.$prenom.' '.$nom.'
     EMAIL: '.$email.'
+    Sujet: '.$sujet.'
     MESSAGE: '.$message;
   $headers = 'From: '.$email . "\r\n" .
     'Reply-To: '.$email . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
-  mail($to, $nom, $msg, $headers);
+  mail($to, 'Website Contact Form | '.$sujet, $msg, $headers);
   //$host  = $_SERVER['HTTP_HOST'];
   //$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
   //$extra = 'que-faire-lors-d-un-deces-merci';
